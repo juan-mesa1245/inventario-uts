@@ -3,7 +3,7 @@ spring:
     name: inventario-activos-uts
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/inventario_uts
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/inventario_uts}
     username: ${DB_USERNAME:postgres}
     password: ${DB_PASSWORD:1245}
     driver-class-name: org.postgresql.Driver
@@ -49,7 +49,7 @@ app:
     refresh-expiration: 604800000  # 7 días en ms
 
   cors:
-    allowed-origins: "http://localhost:5173,http://localhost:3000"
+    allowed-origins: "${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000}"
 
 springdoc:
   api-docs:
