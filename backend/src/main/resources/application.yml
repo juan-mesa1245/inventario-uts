@@ -49,7 +49,7 @@ app:
     refresh-expiration: 604800000  # 7 días en ms
 
   cors:
-    allowed-origins: "${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000}"
+    allowed-origins: "${CORS_ALLOWED_ORIGINS:https://inventario-uts.vercel.app,http://localhost:5173,http://localhost:3000}"
 
 springdoc:
   api-docs:
